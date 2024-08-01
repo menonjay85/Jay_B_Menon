@@ -1,0 +1,26 @@
+<footer id="footer" class="panel">
+  <div class="inner split text-light">
+    <div>
+      <section>
+        <h2>{{ site.title }}</h2>
+        <p>{{ site.description }}</p>
+      </section>
+      {%- include social.html -%}
+      <p class="copyright">
+        &copy; <a href="mailto:{{ site.email }}">{{ site.author }}</a>.
+      </p>
+    </div>
+    <div>
+      <section>
+        <h2>Get in touch</h2>
+        <p class="fields">
+          <!-- <a href="mailto:{{ site.email }}">{{ RESUME }}</a>. -->
+          <a href="mailto:{{ site.email }}">Email</a>
+          <br><br>
+          <a href="{{site.baseurl}}/assets/Sushma_S_Chandra_Resume.pdf">Resume</a>
+        </p>
+        <p>{{ site.email }}</p>
+      </section>
+    </div>
+  </div>
+</footer>

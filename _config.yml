@@ -1,0 +1,25 @@
+title: Robotics Engineer
+author: Jay
+email: jmenon2@asu.edu
+description: >-
+  Hi, I'm currently a graduate student in the MS in Robotics program at Northwestern University.
+  You just saw some of my cool projects. I'm passionate about autonomous systems, computer vision, 
+  AI, robotic manipulator, and navigation. 
+
+social:
+  github: menonjay85
+  linkedin: 
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  images:
+    output: true
+
+
+url: menonjay85.github.io
+baseurl: 

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Robotics Engineer | Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation.</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Robotics Engineer" />
+<meta name="author" content="Jay" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation." />
+<meta property="og:description" content="Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation." />
+<link rel="canonical" href="http://localhost:4000/projects/Quadrotor_Autonomous_Control/" />
+<meta property="og:url" content="http://localhost:4000/projects/Quadrotor_Autonomous_Control/" />
+<meta property="og:site_name" content="Robotics Engineer" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Robotics Engineer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Jay"},"description":"Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation.","headline":"Robotics Engineer","url":"http://localhost:4000/projects/Quadrotor_Autonomous_Control/"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Robotics Engineer" /><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper"><header id="header">
+  <h1><a href="index.html"><strong>Robotics Engineer</strong></a></h1>
+  <nav>
+    <ul>
+      <li><a href="#footer" class="icon solid fa-info-circle"><b>About Sushma</b></a></li>
+    </ul>
+  </nav>
+</header>
+<div id="main">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 my-5 text-center text-light">
+              <h1>Quadrotor Autonomous Control</h1>
+              <p>Quadrotor Mixed Autonomy | Jan-March 2023.</p>
+            </div>
+          </div>
+
+          <div class="px-0 px-lg-5">
+            <div class="px-0 px-lg-5">
+              <div class="px-0 px-lg-5">
+                <div class="px-0 px-lg-5">
+                  <div class="px-0 px-lg-5">
+          
+            
+            <div class="row">
+              <div class="col-12 px-0 text-center">
+                <img class="mx-auto d-block my-3" src="/assets/images/thumbs/quadrotor.gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg"/>
+                <figcaption class="figure-caption text-light">Qudrotor Autonomous flying</figcaption>
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                <h3 style="font-weight: 600 !important;">Overview</h3>
+                  
+                
+                <p>
+                   The goal was to develop a quadrotor autopilot system that can fly autonomously. <br> The sub-goals of the project involved : <br> - control of the quadrotor manually via keyboard <br> - control of the quadrotor manually via joystick <br> - autonomous control of the quadrotor via Vive Lighthouse <br> <br> <br> 
+                </p>
+                
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                <h3 style="font-weight: 600 !important;">Hardware setup</h3>
+                  
+                
+                <p>
+                   The harware components of the quadrotor that were assembled primarily comprises <br> the WIFI module, IMU (Inertial Measurement Unit) sensor, raspberry pi, 4 motors and a rechargable lithium battery.<br> Additional harware that was used was a joystick and vive sensor.<br> <br> <br>
+<br> 
+                </p>
+                
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                <h3 style="font-weight: 600 !important;">Control</h3>
+                  
+                
+                <p>
+                  The roll, pitch, yaw is controlled by using PID (Proportional Integral and Derivative ) algorithm. <br> This allows for smooth flight in all directions with minimal overshooting or oscillations.<br> The PID gains were fine-tuned to gain stable and precise control of the quadrotor's orientation. <br> The thrust is controlled by regulating the PWM of the motors. <br> <br> //Complementary filter for estimating roll and pitch angles <br> //using gyroscope and accelerometer data from an IMU: <br> roll_gyro += imu_data[1]*imu_diff; <br> pitch_gyro += imu_data[0]*imu_diff; <br> roll_angle = roll_accel*A_COMP_FILTER + (1-A_COMP_FILTER)*(roll_angle+imu_data[1]*imu_diff); <br> pitch_angle = pitch_accel*A_COMP_FILTER + (1-A_COMP_FILTER)*(pitch_angle+imu_data[0]*imu_diff); <br>
+//motor controls: <br> motor_cntrl0 = desired_thrust+desired_pitch-desired_roll-yaw_error*P_YAW-yaw_vive_error*P_VIVE_YAW; <br> motor_cntrl1 = desired_thrust-desired_pitch-desired_roll+yaw_vive_error*P_VIVE_YAW; <br> motor_cntrl2 = desired_thrust-desired_pitch+desired_roll-yaw_vive_error*P_VIVE_YAW; <br> motor_cntrl3 = desired_thrust+desired_pitch+desired_roll+yaw_error*P_YAW+yaw_vive_error*P_VIVE_YAW; <br>
+<br> <br> <br> 
+                </p>
+                
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                <h3 style="font-weight: 600 !important;">Safety</h3>
+                  
+                
+                <p>
+                   When in manual control i.e while using the keyboard or joystick the heartbeat was measured <br> to know if the quadrotor is even connected to these input devices or not. There is a pause button that stops the motors, and a shutdown button that kills the program and stops the motors that is incorporated. There is a maximum and minimum thrust and indirect speed or neutral power assigned to the control (via keyboard or joystick). <br> There is also a maximum and minimum angle that is programmed to not exceed for either of pitch or roll. <br> <br>
+<br> 
+                </p>
+                
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                <h3 style="font-weight: 600 !important;">Project Partner</h3>
+                  
+                
+                <p>
+                   Charles Cheng <br> <br>
+<br> 
+                </p>
+                
+              </div>
+            </div>
+            
+          
+            
+            <p>
+              
+            </p>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div><footer id="footer" class="panel">
+  <div class="inner split text-light">
+    <div>
+      <section>
+        <h2>Robotics Engineer</h2>
+        <p>Hi, I'm currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I'm passionate about autonomous systems, computer vision,  AI, robotic manipulator, and navigation. </p>
+      </section><section>
+  <h2>Follow me on ...</h2>
+  <ul class="icons"><li><a href="https://github.com/menonjay85" class="icon brands fa-github"><span class="label">GitHub</span></a></li></ul>
+</section>
+
+
+
+
+<!--<ul class="social-media-list"></ul> -->
+<p class="copyright">
+        &copy; <a href="mailto:jmenon2@asu.edu">Jay</a>.
+      </p>
+    </div>
+    <div>
+      <section>
+        <h2>Get in touch</h2>
+        <p class="fields">
+          <!-- <a href="mailto:jmenon2@asu.edu"></a>. -->
+          <a href="mailto:jmenon2@asu.edu">Email</a>
+          <br><br>
+          <a href="/assets/Sushma_S_Chandra_Resume.pdf">Resume</a>
+        </p>
+        <p>jmenon2@asu.edu</p>
+      </section>
+    </div>
+  </div>
+</footer>
+</div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.poptrox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+  </body>
+
+</html>

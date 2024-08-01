@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Robotics Engineer | Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation.</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Robotics Engineer" />
+<meta name="author" content="Jay" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation." />
+<meta property="og:description" content="Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation." />
+<link rel="canonical" href="http://localhost:4000/projects/2D_Physics_Engine/" />
+<meta property="og:url" content="http://localhost:4000/projects/2D_Physics_Engine/" />
+<meta property="og:site_name" content="Robotics Engineer" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Robotics Engineer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Jay"},"description":"Hi, I’m currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I’m passionate about autonomous systems, computer vision, AI, robotic manipulator, and navigation.","headline":"Robotics Engineer","url":"http://localhost:4000/projects/2D_Physics_Engine/"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Robotics Engineer" /><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper"><header id="header">
+  <h1><a href="index.html"><strong>Robotics Engineer</strong></a></h1>
+  <nav>
+    <ul>
+      <li><a href="#footer" class="icon solid fa-info-circle"><b>About Sushma</b></a></li>
+    </ul>
+  </nav>
+</header>
+<div id="main">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 my-5 text-center text-light">
+              <h1>Cleaning (turtle)bot</h1>
+              <p>One-liner description | Date-Year</p>
+            </div>
+          </div>
+
+          <div class="px-0 px-lg-5">
+            <div class="px-0 px-lg-5">
+              <div class="px-0 px-lg-5">
+                <div class="px-0 px-lg-5">
+                  <div class="px-0 px-lg-5">
+          
+            
+            <div class="row">
+              <div class="col-12 px-0 text-center">
+                <img class="mx-auto d-block my-3" src="/assets/images/thumbs/grid_clean.gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg"/>
+                <figcaption class="figure-caption text-light">A caption for the above image.</figcaption>
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                <h3 style="font-weight: 600 !important;">Overview</h3>
+                  
+                
+                <p>
+                  To simulate and animate fundamental movements behind a house cleaning robot using ROS. <br> <br>
+The configuration variables are:<br> q = [x_box, y_box, θ_box, x_jack, y_jack, θ_jack] <br> At the start, the turtlebot rests at a coordinate (5,5).<br> 
+                </p>
+                
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-0 text-center">
+                <img class="mx-auto d-block my-3" src="/assets/images/thumbs/move_fwd.gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg"/>
+                <figcaption class="figure-caption text-light">A caption for the above image.</figcaption>
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                <h3 style="font-weight: 600 !important;">Description</h3>
+                  
+                
+                <p>
+                   <br> <i><strong>Rigid Body transformations</strong></i><br>
+<br> <br>
+<i><b>Forces and Constraints</b></i><br> <br> An external force of 700*sin(pi*t) is applied on the box in the x direction. A sinusoidal type of force provides a back and forth shaking motion. 700 is the amplitude and pi*t is the period; frequency=2pi/period.<br> And another external force of magnitude of the gravitational force acting on the box (Total mass of box*gravity*height of the box from its center of mass with respect to the world frame) is applied in the opposite direction of that gravitational force to prevent the Box from falling down and going outside the scene.<br>
+<br>
+
+                </p>
+                
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-0 text-center">
+                <img class="mx-auto d-block my-3" src="/assets/images/thumbs/jack2.png" alt="https://www.w3schools.com/bootstrap4/paris.jpg"/>
+                <figcaption class="figure-caption text-light"></figcaption>
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-0 text-center">
+                <img class="mx-auto d-block my-3" src="/assets/images/thumbs/jack3.png" alt="https://www.w3schools.com/bootstrap4/paris.jpg"/>
+                <figcaption class="figure-caption text-light"></figcaption>
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-0 text-center">
+                <img class="mx-auto d-block my-3" src="/assets/images/thumbs/jack4.png" alt="https://www.w3schools.com/bootstrap4/paris.jpg"/>
+                <figcaption class="figure-caption text-light"></figcaption>
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-0 text-center">
+                <img class="mx-auto d-block my-3" src="/assets/images/thumbs/jack5.png" alt="https://www.w3schools.com/bootstrap4/paris.jpg"/>
+                <figcaption class="figure-caption text-light"></figcaption>
+              </div>
+            </div>
+            
+          
+            
+            <div class="row">
+              <div class="col-12 px-5 text-light content-paragraph">
+                
+                
+                <p>
+                   <i><b>Observation</b></i> <br> The box is shaking as expected which slowly starts to die down until the impact from the jack adds a torque to the box. The box’s height is maintained to an extent and not changing much with respect to its center of mass to the world frame and it does not fall out of the scene.<br> The jack due to the force of gravity acting on it always tries to fall down while staying inside the box.<br> The impact of the jack on the walls of the box causes the jack itself to rotate as well as bounce from one wall to another.<br> 
+                </p>
+                
+              </div>
+            </div>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div><footer id="footer" class="panel">
+  <div class="inner split text-light">
+    <div>
+      <section>
+        <h2>Robotics Engineer</h2>
+        <p>Hi, I'm currently a graduate student in the MS in Robotics program at Northwestern University. You just saw some of my cool projects. I'm passionate about autonomous systems, computer vision,  AI, robotic manipulator, and navigation. </p>
+      </section><section>
+  <h2>Follow me on ...</h2>
+  <ul class="icons"><li><a href="https://github.com/menonjay85" class="icon brands fa-github"><span class="label">GitHub</span></a></li></ul>
+</section>
+
+
+
+
+<!--<ul class="social-media-list"></ul> -->
+<p class="copyright">
+        &copy; <a href="mailto:jmenon2@asu.edu">Jay</a>.
+      </p>
+    </div>
+    <div>
+      <section>
+        <h2>Get in touch</h2>
+        <p class="fields">
+          <!-- <a href="mailto:jmenon2@asu.edu"></a>. -->
+          <a href="mailto:jmenon2@asu.edu">Email</a>
+          <br><br>
+          <a href="/assets/Sushma_S_Chandra_Resume.pdf">Resume</a>
+        </p>
+        <p>jmenon2@asu.edu</p>
+      </section>
+    </div>
+  </div>
+</footer>
+</div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.poptrox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+  </body>
+
+</html>
