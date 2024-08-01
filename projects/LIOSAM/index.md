@@ -7,9 +7,9 @@ project_content:
     - 
         type: image
         title: LIOSAM implementation in Gazebo (with Loop Closure)
-        # body: /assets/images/thumbs/liosam.gif" class="scaled-gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg  
+        body: /assets/images/thumbs/liosam.gif" class="scaled-gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg  
         #body: '"image-container"><img src="/assets/images/thumbs/liosam.gif" class="scaled-gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg"'
-        body: '"image-container"><img src="/assets/images/thumbs/liosam.gif" class="scaled-gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg"'
+        # body: '"image-container"><img src="/assets/images/thumbs/liosam.gif" class="scaled-gif" alt="https://www.w3schools.com/bootstrap4/paris.jpg"'
     
 
     
